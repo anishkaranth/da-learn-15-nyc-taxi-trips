@@ -22,7 +22,7 @@ COMPARE_TABLES = ["a_kpi_headline", "a_hourly", "a_day_of_week", "a_borough", "a
 SHOT_CONFIG = {"engine": "duckdb (local, full data) + Databricks serverless SQL", "sql_dialect": "Spark/Databricks SQL + DuckDB shims (sql/00)",
                "month": "2024-01 (pickup timestamp)", "valid_trip": "pickup in month, 1-180 min, 0-100 mi, fare 0-500, total > 0, speed <= 80 mph",
                "tip_pct": "tip / fare on credit-card trips (cash tips are not recorded)",
-               "sample_rule": "data/raw = first pickup of each hour on 2024-01-15 + 6 rule-breaking rows, as CSV; zones used by those rows"}
+               "sample_rule": "data/raw = first pickup of each hour on 2024-01-15 + first row breaking each of 6 rules (5 rows), as CSV; zones used by those rows"}
 SHOT_QUERIES = {
     "peak_hours": "SELECT pickup_hour, trips, avg_speed_mph FROM a_hourly ORDER BY trips DESC LIMIT 3",
     "boroughs": "SELECT pickup_borough, trips, share_pct, avg_fare FROM a_borough ORDER BY trips DESC",
