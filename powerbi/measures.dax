@@ -1,0 +1,23 @@
+-- Measures for the NYC taxi star model (home table: fact_trips)
+Trips = COUNTROWS ( fact_trips )
+Gross Revenue = SUM ( fact_trips[total_amount] )
+Avg Fare = AVERAGE ( fact_trips[fare_amount] )
+Avg Total = AVERAGE ( fact_trips[total_amount] )
+Avg Distance (mi) = AVERAGE ( fact_trips[trip_distance] )
+Avg Duration (min) = AVERAGE ( fact_trips[duration_min] )
+Fare per Mile = DIVIDE ( SUM ( fact_trips[fare_amount] ), SUM ( fact_trips[trip_distance] ) )
+Avg Speed (mph) = DIVIDE ( SUM ( fact_trips[trip_distance] ), SUM ( fact_trips[duration_min] ) / 60 )
+Days in Context = DISTINCTCOUNT ( fact_trips[date_key] )
+Trips per Day = DIVIDE ( [Trips], [Days in Context] )
+Card Trips = CALCULATE ( [Trips], fact_trips[payment_type] = 1 )
+Card Share % = DIVIDE ( [Card Trips], [Trips] )
+Card Tip % of Fare =
+    CALCULATE (
+        DIVIDE ( SUM ( fact_trips[tip_amount] ), SUM ( fact_trips[fare_amount] ) ),
+        fact_trips[payment_type] = 1
+    )
+Airport Pickup Share % = DIVIDE ( CALCULATE ( [Trips], dim_zone[is_airport] = 1 ), [Trips] )
+Weekend Trips per Day = CALCULATE ( [Trips per Day], dim_date[is_weekend] = 1 )
+Weekday Trips per Day = CALCULATE ( [Trips per Day], dim_date[is_weekend] = 0 )
+Dropoff Trips = CALCULATE ( [Trips], USERELATIONSHIP ( fact_trips[do_location_id], dim_zone[location_id] ) )
+Flagged Unknown Payment = CALCULATE ( [Trips], fact_trips[dq_unknown_payment] = 1 )
