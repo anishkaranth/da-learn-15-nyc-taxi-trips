@@ -1,0 +1,35 @@
+location_id,borough,zone,service_zone,is_airport
+43,Manhattan,Central Park,Yellow Zone,0
+48,Manhattan,Clinton East,Yellow Zone,0
+50,Manhattan,Clinton West,Yellow Zone,0
+53,Queens,College Point,Boro Zone,0
+68,Manhattan,East Chelsea,Yellow Zone,0
+90,Manhattan,Flatiron,Yellow Zone,0
+100,Manhattan,Garment District,Yellow Zone,0
+107,Manhattan,Gramercy,Yellow Zone,0
+114,Manhattan,Greenwich Village South,Yellow Zone,0
+132,Queens,JFK Airport,Airports,1
+138,Queens,LaGuardia Airport,Airports,1
+141,Manhattan,Lenox Hill West,Yellow Zone,0
+142,Manhattan,Lincoln Square East,Yellow Zone,0
+143,Manhattan,Lincoln Square West,Yellow Zone,0
+161,Manhattan,Midtown Center,Yellow Zone,0
+162,Manhattan,Midtown East,Yellow Zone,0
+163,Manhattan,Midtown North,Yellow Zone,0
+164,Manhattan,Midtown South,Yellow Zone,0
+166,Manhattan,Morningside Heights,Boro Zone,0
+170,Manhattan,Murray Hill,Yellow Zone,0
+186,Manhattan,Penn Station/Madison Sq West,Yellow Zone,0
+188,Brooklyn,Prospect-Lefferts Gardens,Boro Zone,0
+229,Manhattan,Sutton Place/Turtle Bay North,Yellow Zone,0
+230,Manhattan,Times Sq/Theatre District,Yellow Zone,0
+233,Manhattan,UN/Turtle Bay South,Yellow Zone,0
+234,Manhattan,Union Sq,Yellow Zone,0
+236,Manhattan,Upper East Side North,Yellow Zone,0
+237,Manhattan,Upper East Side South,Yellow Zone,0
+238,Manhattan,Upper West Side North,Yellow Zone,0
+246,Manhattan,West Chelsea/Hudson Yards,Yellow Zone,0
+249,Manhattan,West Village,Yellow Zone,0
+262,Manhattan,Yorkville East,Yellow Zone,0
+263,Manhattan,Yorkville West,Yellow Zone,0
+264,Unknown,N/A,N/A,0

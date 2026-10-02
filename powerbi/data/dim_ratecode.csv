@@ -1,0 +1,8 @@
+ratecode_id,ratecode_name
+1,Standard
+2,JFK flat fare
+3,Newark
+4,Nassau/Westchester
+5,Negotiated
+6,Group ride
+99,Unknown
